@@ -5,90 +5,140 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moment Lens — プライバシーポリシー</title>
 <meta name="description" content="Moment Lens のプライバシーポリシー。個人情報の収集は一切なく、写真・動画は端末外へ送信されません。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#20242c; --muted:#6b7280; --accent:#e2643f; --line:#e8e4dd; --bg:#fdfbf7; }
+  :root {
+    --paper:#FCFCFB; --ink:#16181C; --sub:#585E66;
+    --line:#E3E2DE; --blue:#2A4FA2; --amber:#D9962E;
+  }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); line-height:1.85;
+  html { background:var(--paper); }
+  body { margin:0; color:var(--ink); line-height:1.9; font-size:15.5px;
     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; }
-  .wrap { max-width:720px; margin:0 auto; padding:64px 24px 96px; }
-  header { border-bottom:1px solid var(--line); padding-bottom:28px; margin-bottom:44px; }
-  h1 { font-size:30px; margin:0 0 8px; }
-  .tag { color:var(--muted); font-size:15px; margin:0; }
-  h2 { font-size:19px; margin:44px 0 12px; }
-  p, li { font-size:15.5px; color:#33383f; }
-  ul { padding-left:1.2em; }
-  a { color:var(--accent); }
-  .lead { background:#fff; border:1px solid var(--line); border-left:4px solid var(--accent);
-    border-radius:12px; padding:20px 24px; }
-  .lead p { margin:0; font-weight:600; }
-  table { border-collapse:collapse; width:100%; margin:16px 0; font-size:15px; }
-  th, td { border:1px solid var(--line); padding:10px 14px; text-align:left; background:#fff; }
-  th { background:#f6f2ec; font-weight:600; }
-  footer { margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
-    color:var(--muted); font-size:13.5px; }
-  nav a { margin-right:18px; font-size:14.5px; }
+  .wrap { max-width:660px; margin:0 auto; padding:56px 24px 100px; }
+  a { color:var(--blue); text-underline-offset:3px; }
+  a:focus-visible { outline:2px solid var(--blue); outline-offset:3px; border-radius:1px; }
+
+  .masthead { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:64px; }
+  .masthead .name { font-family:"Shippori Mincho",serif; font-weight:600; font-size:17px;
+    letter-spacing:.06em; color:var(--ink); text-decoration:none; }
+  .masthead nav a { font-size:13.5px; margin-left:22px; color:var(--sub); text-decoration:none; }
+  .masthead nav a[aria-current] { color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:2px; }
+  .masthead nav a:hover { color:var(--ink); }
+
+  /* 冒頭の約束: 装飾ではなく宣言として大きく組む */
+  .vow { margin:0 0 22px; }
+  .vow h1 { font-family:"Shippori Mincho",serif; font-weight:600;
+    font-size:clamp(23px,4.6vw,30px); line-height:1.85; letter-spacing:.04em; margin:0; }
+  .vow .meta { font-size:13px; color:var(--sub); margin-top:18px; letter-spacing:.03em; }
+  .vowline { border:0; border-top:1px solid var(--ink); margin:38px 0 0; }
+
+  /* 条文: 番号は法的文書の実序数なので意味を持つ */
+  section { margin-top:56px; }
+  h2 { font-family:"Shippori Mincho",serif; font-weight:600; font-size:17.5px;
+    letter-spacing:.05em; margin:0 0 14px; }
+  h2 .no { font-family:ui-monospace,Menlo,monospace; font-weight:400; font-size:13px;
+    color:var(--sub); margin-right:14px; letter-spacing:.1em; }
+  p, li, td, th { color:#2E3238; }
+  section p { margin:12px 0; }
+
+  table { border-collapse:collapse; width:100%; margin:18px 0 6px; font-size:14.5px; }
+  caption { text-align:left; font-size:13px; color:var(--sub); margin-bottom:8px; }
+  th, td { border-bottom:1px solid var(--line); padding:10px 12px 10px 0;
+    text-align:left; vertical-align:top; font-weight:400; }
+  thead th { font-size:13px; color:var(--sub); letter-spacing:.04em; border-bottom:1px solid var(--ink); }
+  code { font-family:ui-monospace,Menlo,monospace; font-size:.92em; background:#F1F1EE;
+    padding:1px 5px; border-radius:3px; }
+
+  footer { margin-top:96px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:13px; color:var(--sub);
+    display:flex; justify-content:space-between; align-items:baseline; }
+  footer .ds { font-family:ui-monospace,Menlo,monospace; letter-spacing:.14em;
+    color:var(--amber); transform:skewX(-4deg); }
+  @media (max-width:480px) {
+    .wrap { padding-top:40px; }
+    .masthead { margin-bottom:44px; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header>
-  <h1>プライバシーポリシー</h1>
-  <p class="tag">Moment Lens ／ 最終更新日: 2026年8月10日</p>
+<header class="masthead">
+  <a class="name" href="./">Moment Lens</a>
+  <nav>
+    <a href="./">サポート</a>
+    <a href="./privacy.html" aria-current="page">プライバシー</a>
+  </nav>
 </header>
 
-<nav><a href="./">サポート</a><a href="./privacy.html">プライバシーポリシー</a></nav>
-
-<div class="lead">
-  <p>Moment Lens は、利用者の個人情報を一切収集しません。<br>
-  写真・動画を含むすべてのデータは利用者のiPhoneの中だけで扱われ、外部へ送信されることはありません。</p>
+<div class="vow">
+  <h1>Moment Lens は、<br>
+  利用者の個人情報を一切収集しません。<br>
+  写真も動画も、あなたのiPhoneの中だけ。</h1>
+  <p class="meta">プライバシーポリシー ／ 最終更新日: 2026年8月11日</p>
+  <hr class="vowline">
 </div>
 
-<h2>1. 収集する情報</h2>
+<section>
+<h2><span class="no">1</span>収集する情報</h2>
 <p>
 本アプリは、利用者に関するいかなる個人情報も収集・記録・送信しません。
 アカウント登録は不要で、氏名・メールアドレス・電話番号・位置情報・端末識別子などを取得することはありません。
 </p>
+</section>
 
-<h2>2. 端末内で扱うデータ</h2>
+<section>
+<h2><span class="no">2</span>端末内で扱うデータ</h2>
 <p>以下のデータは、本アプリの機能を提供するために利用者の端末内でのみ保存・利用されます。</p>
 <table>
-  <tr><th>データ</th><th>用途</th><th>保存場所</th></tr>
+  <thead><tr><th>データ</th><th>用途</th><th>保存場所</th></tr></thead>
+  <tbody>
   <tr><td>利用者が選択した写真</td><td>ARで認識する対象として使用</td><td>端末内のアプリ専用領域</td></tr>
   <tr><td>利用者が選択した動画</td><td>写真の上に重ねて再生</td><td>端末内のアプリ専用領域</td></tr>
   <tr><td>タイトル・実物サイズ・メッセージ等の設定</td><td>AR表示の制御</td><td>端末内のアプリ専用領域</td></tr>
   <tr><td>オンボーディング表示済みフラグ</td><td>初回起動時の案内の制御</td><td>UserDefaults</td></tr>
+  </tbody>
 </table>
-<p>
-これらはアプリを削除すると端末から削除されます。開発者がこれらを閲覧・取得する手段はありません。
-</p>
+<p>これらはアプリを削除すると端末から削除されます。開発者がこれらを閲覧・取得する手段はありません。</p>
+</section>
 
-<h2>3. カメラの使用</h2>
+<section>
+<h2><span class="no">3</span>カメラの使用</h2>
 <p>
 写真を認識してARを表示するためにカメラを使用します。
-カメラ映像はリアルタイムに画面表示と画像認識のために処理されるだけで、
-保存も録画も送信も行いません。
+カメラ映像はリアルタイムに画面表示と画像認識のために処理されるだけで、保存も録画も送信も行いません。
 </p>
+</section>
 
-<h2>4. 写真ライブラリへのアクセス</h2>
+<section>
+<h2><span class="no">4</span>写真ライブラリへのアクセス</h2>
 <p>
 登録する写真・動画を選ぶときにのみ、利用者が選択した項目に限ってアクセスします。
 ライブラリ全体を読み取ることはありません。選択された写真・動画はアプリ専用領域に複製され、以後はその複製のみを使用します。
 </p>
+</section>
 
-<h2>5. ネットワーク通信</h2>
+<section>
+<h2><span class="no">5</span>ネットワーク通信</h2>
 <p>
 本アプリはネットワーク通信を行いません。
 解析ツール、広告、クラッシュレポート、その他の第三者製SDKを一切組み込んでいません。
 </p>
+</section>
 
-<h2>6. トラッキング</h2>
+<section>
+<h2><span class="no">6</span>トラッキング</h2>
 <p>
 本アプリは、利用者や端末を追跡しません。
 第三者への情報提供・販売も行いません（提供する情報自体を保有していません）。
 </p>
+</section>
 
-<h2>7. 共有機能について</h2>
+<section>
+<h2><span class="no">7</span>共有機能について</h2>
 <p>
 本アプリには、登録したアイテムを <code>.livingphoto</code> ファイルとして書き出し、
 AirDrop やメッセージアプリなどで他の人に渡す機能があります。
@@ -102,28 +152,35 @@ AirDrop やメッセージアプリなどで他の人に渡す機能がありま
 他人の写真・動画を含むファイルを共有する場合は、写っている方の同意と、
 その映像を共有する権利をお持ちであることをご確認ください。
 </p>
+</section>
 
-<h2>8. 子どものプライバシー</h2>
+<section>
+<h2><span class="no">8</span>子どものプライバシー</h2>
 <p>
 本アプリは個人情報を収集しないため、年齢を問わず安全にご利用いただけます。
 保護者の方がお子さまの写真や動画を登録される場合も、それらが端末外に出ることはありません。
 </p>
+</section>
 
-<h2>9. 本ポリシーの変更</h2>
+<section>
+<h2><span class="no">9</span>本ポリシーの変更</h2>
 <p>
 本ポリシーを変更する場合は、このページを更新し、最終更新日を改めます。
 データの取り扱いに実質的な変更が生じる場合は、アプリ内でお知らせします。
 </p>
+</section>
 
-<h2>10. お問い合わせ</h2>
+<section>
+<h2><span class="no">10</span>お問い合わせ</h2>
 <p>
 本ポリシーに関するご質問は
 <a href="mailto:kitsupport.apps@gmail.com">kitsupport.apps@gmail.com</a> までご連絡ください。
 </p>
+</section>
 
 <footer>
-  Moment Lens © 2026<br>
-  <a href="./">サポートページ</a>
+  <span>Moment Lens © 2026 ／ <a href="./">サポートページ</a></span>
+  <span class="ds" aria-hidden="true">'26 8 11</span>
 </footer>
 
 </div>

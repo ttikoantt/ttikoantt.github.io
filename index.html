@@ -4,27 +4,69 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ttikoantt — Apps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  body { margin:0; background:#fdfbf7; color:#20242c; line-height:1.8;
+  :root {
+    --paper:#FCFCFB; --ink:#16181C; --sub:#585E66;
+    --line:#E3E2DE; --blue:#2A4FA2; --amber:#D9962E;
+  }
+  * { box-sizing:border-box; }
+  html { background:var(--paper); }
+  body { margin:0; color:var(--ink); line-height:1.9; font-size:15.5px;
     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; }
-  .wrap { max-width:640px; margin:0 auto; padding:80px 24px; }
-  h1 { font-size:28px; margin:0 0 32px; }
-  a.card { display:block; background:#fff; border:1px solid #e8e4dd; border-radius:14px;
-    padding:22px 26px; margin:16px 0; text-decoration:none; color:inherit; }
-  a.card:hover { border-color:#e2643f; }
-  .name { font-weight:700; font-size:18px; }
-  .desc { color:#6b7280; font-size:14.5px; margin-top:4px; }
-  footer { margin-top:56px; color:#6b7280; font-size:13.5px; }
+  .wrap { max-width:560px; margin:0 auto; padding:88px 24px 100px; }
+  a { color:var(--blue); text-underline-offset:3px; }
+  a:focus-visible { outline:2px solid var(--blue); outline-offset:3px; border-radius:1px; }
+
+  h1 { font-family:"Shippori Mincho",serif; font-weight:600; font-size:21px;
+    letter-spacing:.08em; margin:0 0 8px; }
+  .lede { font-size:13.5px; color:var(--sub); margin:0 0 56px; letter-spacing:.02em; }
+
+  /* アプリ一覧: プリント写真として並べる */
+  .print { display:block; position:relative; background:#fff; padding:11px;
+    box-shadow:0 1px 2px rgba(20,22,26,.07), 0 10px 26px rgba(20,22,26,.08);
+    transform:rotate(-.5deg); text-decoration:none; color:inherit;
+    transition:transform .25s ease, box-shadow .25s ease; margin:0 0 36px; }
+  .print:hover { transform:rotate(0deg) translateY(-2px);
+    box-shadow:0 2px 4px rgba(20,22,26,.08), 0 16px 36px rgba(20,22,26,.12); }
+  .print:focus-visible { outline:2px solid var(--blue); outline-offset:4px; }
+  .photo { display:block; position:relative; padding:34px 26px 30px;
+    background:linear-gradient(178deg,#EAF1F4 0%,#F2F4EE 58%,#EDF0E6 100%); }
+  .photo .name { display:block; font-family:"Shippori Mincho",serif; font-weight:600; font-size:20px;
+    letter-spacing:.05em; margin:0; }
+  .photo .desc { font-size:13.5px; color:var(--sub); margin:8px 0 0; }
+  .corner { position:absolute; width:15px; height:15px; border:2px solid var(--ink); opacity:.8; }
+  .corner.tl { top:10px; left:10px;  border-right:0; border-bottom:0; }
+  .corner.br { bottom:10px; right:10px; border-left:0; border-top:0; }
+  .datestamp { position:absolute; right:14px; bottom:9px;
+    font-family:ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:.14em;
+    color:var(--amber); text-shadow:0 0 5px rgba(217,150,46,.4); transform:skewX(-4deg); }
+
+  footer { margin-top:72px; padding-top:22px; border-top:1px solid var(--line);
+    font-size:13px; color:var(--sub); }
 </style>
 </head>
 <body>
 <div class="wrap">
-<h1>Apps</h1>
-<a class="card" href="./momentlens/">
-  <div class="name">Moment Lens</div>
-  <div class="desc">写真にかざすと、動画が動き出す。</div>
+
+<h1>ttikoantt</h1>
+<p class="lede">iPhoneの中だけで完結する、小さなアプリをつくっています。</p>
+
+<a class="print" href="./momentlens/">
+  <span class="photo">
+    <span class="corner tl"></span><span class="corner br"></span>
+    <span class="name">Moment Lens</span>
+    <span class="desc" style="display:block">写真にかざすと、動画が動き出す。</span>
+    <span class="datestamp" aria-hidden="true">'26</span>
+  </span>
 </a>
-<footer>お問い合わせ: <a href="mailto:kitsupport.apps@gmail.com">kitsupport.apps@gmail.com</a></footer>
+
+<footer>
+  お問い合わせ: <a href="mailto:kitsupport.apps@gmail.com">kitsupport.apps@gmail.com</a>
+</footer>
+
 </div>
 </body>
 </html>
