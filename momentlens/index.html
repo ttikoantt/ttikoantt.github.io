@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Moment Lens — サポート</title>
 <meta name="description" content="Moment Lens（写真にかざすと動画が動き出すARアプリ）のサポートページ。よくある質問と問い合わせ先。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper:#FCFCFB; --ink:#16181C; --sub:#585E66;
@@ -17,15 +14,14 @@
   html { background:var(--paper); }
   body { margin:0; color:var(--ink); line-height:1.9; font-size:15.5px;
     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; }
-  .serif { font-family:"Shippori Mincho","Hiragino Mincho ProN",serif; }
   .wrap { max-width:660px; margin:0 auto; padding:56px 24px 100px; }
   a { color:var(--blue); text-underline-offset:3px; }
   a:focus-visible { outline:2px solid var(--blue); outline-offset:3px; border-radius:1px; }
 
   /* ---- 上部: 名前と航法 ---- */
   .masthead { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:64px; }
-  .masthead .name { font-family:"Shippori Mincho",serif; font-weight:600; font-size:17px;
-    letter-spacing:.06em; color:var(--ink); text-decoration:none; }
+  .masthead .name { font-weight:700; font-size:15.5px;
+    letter-spacing:.03em; color:var(--ink); text-decoration:none; }
   .masthead nav a { font-size:13.5px; margin-left:22px; color:var(--sub); text-decoration:none; }
   .masthead nav a[aria-current] { color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:2px; }
   .masthead nav a:hover { color:var(--ink); }
@@ -36,9 +32,9 @@
     transform:rotate(-.6deg); margin:0 0 84px; }
   .photo { position:relative; overflow:hidden; padding:64px 34px 58px;
     background:linear-gradient(178deg,#EAF1F4 0%,#F2F4EE 58%,#EDF0E6 100%); }
-  .photo h1 { margin:0; font-family:"Shippori Mincho",serif; font-weight:600;
-    font-size:clamp(25px,5.4vw,34px); line-height:1.7; letter-spacing:.04em; }
-  .photo .sense { margin:20px 0 0; font-size:14px; color:var(--sub); letter-spacing:.02em; }
+  .photo h1 { margin:0; font-weight:800;
+    font-size:clamp(24px,5.2vw,32px); line-height:1.65; letter-spacing:.03em; }
+  .photo .sense { margin:20px 0 0; font-size:13.5px; color:var(--sub); letter-spacing:.02em; }
   /* ARの認識ブラケット */
   .corner { position:absolute; width:22px; height:22px; border:2.5px solid var(--ink); opacity:.85; }
   .corner.tl { top:16px; left:16px;  border-right:0; border-bottom:0; }
@@ -57,8 +53,8 @@
   }
 
   /* ---- 本文 ---- */
-  h2 { font-family:"Shippori Mincho",serif; font-weight:600; font-size:19px;
-    letter-spacing:.05em; margin:72px 0 20px; }
+  h2 { font-weight:700; font-size:17px;
+    letter-spacing:.03em; margin:72px 0 20px; }
   p, li { color:#2E3238; }
   ol { padding-left:1.4em; }
   ol li { padding-left:.3em; margin:6px 0; }
@@ -66,8 +62,8 @@
 
   /* FAQ: 箱ではなく罫と書体で区切る */
   dl { margin:0; }
-  dt { font-family:"Shippori Mincho",serif; font-weight:600; font-size:16px;
-    letter-spacing:.03em; padding-top:26px; }
+  dt { font-weight:600; font-size:15.5px;
+    letter-spacing:.01em; padding-top:26px; }
   dd { margin:10px 0 26px; border-bottom:1px solid var(--line); padding-bottom:26px; }
   dd:last-of-type { border-bottom:0; padding-bottom:0; }
   dd p { margin:0 0 8px; } dd p:last-child { margin-bottom:0; }
@@ -78,7 +74,7 @@
 
   /* 連絡先: プリント写真の裏面（メモ書き） */
   .contact { border-top:1px solid var(--ink); padding-top:26px; margin-top:72px; }
-  .contact .addr { font-family:"Shippori Mincho",serif; font-size:19px; letter-spacing:.02em; }
+  .contact .addr { font-weight:600; font-size:17px; letter-spacing:.01em; }
   .contact .hint { font-size:13.5px; color:var(--sub); margin-top:10px; }
 
   footer { margin-top:96px; font-size:13px; color:var(--sub);
